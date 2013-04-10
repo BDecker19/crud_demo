@@ -47,7 +47,7 @@ CrudDemo::App.controllers :products do
   delete :index, :with => :id do
       @product = Product.find(params[:id])
       @product.delete
-      redirect "products/"
+      redirect "products"
   end
 
 

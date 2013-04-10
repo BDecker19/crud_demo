@@ -1,0 +1,14 @@
+<h3>Edit product</h3>
+
+<p>old name: <%= @product.title%></p>
+
+<% form_tag url_for(:products, :edit) do %>
+	<p>
+		<%= label_tag :new_name %>
+		<%= text_field_tag :new_name %>
+		<%= submit_tag %>
+	</p>
+
+  <%= hidden_field_tag :id, :value => @product.id %>
+
+<% end %>

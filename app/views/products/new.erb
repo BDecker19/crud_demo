@@ -1,0 +1,9 @@
+<h3>Create new product</h3>
+
+<% form_tag url_for(:products, :create) do %>
+	<p>
+		<%= label_tag :title %>
+		<%= text_field_tag :title %>
+		<%= submit_tag %>
+	</p>
+<% end %>
